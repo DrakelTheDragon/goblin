@@ -1,1 +1,3 @@
-# tmpl-repo-go
+# goblin
+
+Goblin is a basic template repository for Go.

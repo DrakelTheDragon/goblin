@@ -1,0 +1,42 @@
+{
+    "go.toolsManagement.autoUpdate": true,
+    "go.autocompleteUnimportedPackages": true,
+    "go.formatTool": "gofumpt",
+    "go.lintTool": "golangci-lint",
+    "go.lintFlags": [
+        "--fast",
+    ],
+    "gopls": {
+        "formatting.local": "github.com/drakelthedragon",
+        "formatting.gofumpt": true,
+        "ui.semanticTokens": true,
+        "ui.diagnostic.staticcheck": true,
+        "ui.diagnostic.analyses": {
+            "nilness": true,
+            "unusedparams": true,
+            "unusedwrite": true,
+            "useany": true,
+        },
+    },
+    "emeraldwalk.runonsave": {
+        "commands": [
+            {
+                "match": "\\.go$",
+                "cmd": "golines ${file} -w",
+            },
+        ],
+    },
+    "[go]": {
+        "editor.snippetSuggestions": "bottom",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+    },
+    "[go.mod]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true,
+        },
+    },
+}
